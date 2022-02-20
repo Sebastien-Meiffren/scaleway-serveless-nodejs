@@ -1,0 +1,33 @@
+service: <NAMESPACE>
+configValidationMode: off
+provider:
+  name: scaleway
+  runtime: node14
+  # Global Environment variables - used in every functions
+  env:
+    test: test
+  # the path to the credentials file needs to be absolute
+  scwToken: <TOKEN FROM YOUR API>
+  scwProject: <ID OF YOUR PROJECT>
+
+plugins:
+  - serverless-scaleway-functions
+
+package:
+  patterns:
+    - '!.gitignore'
+    - '!.git/**'
+    - './src/**'
+    - './node_modules/**'
+
+functions:
+  firsthandler:
+    handler: src/handler.handle
+    # Local environment variables - used only in given function
+    env:
+      test: test
+  second-handler:
+    handler: src/foo.foohandle
+    # Local environment variables - used only in given function
+    env:
+      test: test
