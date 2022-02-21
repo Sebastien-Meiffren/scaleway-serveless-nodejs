@@ -1,4 +1,4 @@
-# Scaleway Function Serverless Nodejs14
+# Boilerplate for Scaleway Function Serverless Nodejs14
 Based on the information found : https://github.com/scaleway/scaleway-functions-runtimes/tree/master/runtimes/node14
 
 💀💀 DO NOT USE THIS IN PROD. ONLY MEANT FOR TESTING / DEV PURPOSES 💀💀
