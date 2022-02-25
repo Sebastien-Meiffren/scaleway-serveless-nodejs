@@ -1,7 +1,6 @@
-# Scaleway Function Serverless Nodejs14
+# Scaleway Boilerplate Function Serverless Nodejs14
 Based on the information found : https://github.com/scaleway/scaleway-functions-runtimes/tree/master/runtimes/node14
 
-💀💀 DO NOT USE THIS IN PROD. ONLY MEANT FOR TESTING / DEV PURPOSES 💀💀
 ## Install
 Make sure to have installed : 
 - Nodejs (tested with 16.x)
@@ -22,7 +21,10 @@ module.exports.foohandle = (event, context, callback) => {
 ```
 
 ## Tests your function
-⚠️Make sure to restart the start process
+⚠️Make sure to restart the start process  
+⚠️Once a function is used by the process, you won't be able to change it. This is due to the code from Scaleway and I'm limiting the changes. If you want to test another function, you will have to kill the process and start it again
+
+💀💀 DO NOT USE THIS IN PROD. ONLY MEANT FOR TESTING / DEV PURPOSES 💀💀
 
 To test your new function, query the app :   
 ``http://localhost:8081?handlerName=<FUNCTION NAME>&handlerPath=../handlers/src/<FUNCTION PATH>``
